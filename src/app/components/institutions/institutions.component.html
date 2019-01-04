@@ -1,0 +1,136 @@
+<!-- start Main Wrapper -->
+<div class="main-wrapper">
+
+  <div class="second-search-restaurant-wrapper">
+  
+    <div class="container">
+    
+      <form>
+      
+        <div class="second-search-result-inner">
+          <!-- <span class="labeling">Search a college/school</span> -->
+          <div class="row">
+          
+            <div class="col-xss-12 col-xs-6 col-sm-6 col-md-5" >
+              <div class="form-group form-lg" >
+                <input type="text" class="form-control" placeholder="e.g. school/college" />
+              </div>
+            </div>
+            
+            <div class="col-xss-12 col-xs-6 col-sm-6 col-md-5" style="height: 41px;">
+              <select class="selectpicker show-tick form-control mb-15"  data-live-search="false" >
+                <option value="0" selected>Select</option>
+                <option value="1">Diploma</option>
+                <option value="2" >Bachelor</option>
+                <option value="3">Master</option>
+                <option value="4">Doctoral </option>
+                <option value="5">Certificate</option>
+              </select>
+            </div>
+            
+            <div class="col-xss-12 col-xs-6 col-sm-4 col-md-2">
+              <button class="btn btn-block">Search</button>
+            </div>
+          
+          </div>
+        </div>
+      
+      </form>
+      
+  
+  
+    </div>
+  
+  </div>
+  
+  <!-- start hero-header -->
+  <div class="breadcrumb-wrapper">
+  
+    <div class="container">
+    
+      <ol class="breadcrumb-list booking-step">
+        <li><a href="#">Home</a></li>
+        <li><span>Search</span></li>
+      </ol>
+      
+    </div>
+    
+  </div>
+  <!-- end hero-header -->
+  
+  <div class="section sm">
+  
+    <div class="container">
+    
+  
+      
+      <div class="company-grid-wrapper top-company-2-wrapper">
+  
+        <div class="GridLex-gap-30">
+        
+          <div class="GridLex-grid-noGutter-equalHeight">
+          
+            
+            <div class="GridLex-col-3_sm-4_xs-6_xss-12" *ngFor="let p of institute; let i=index;">
+            
+              <div class="top-company-2" style="position: relative;">
+                <a href="#">
+                
+                  <div class="image">
+                    <img src="../../../assets/css/images/slide-2.jpg" alt="image" />
+                  </div>
+                  
+                  <div class="content">
+                    <h5 class="heading text-primary font700">{{p.instituteName}}</h5>
+                    
+                    <p class="texting font600">{{p.description}}</p>
+  
+                    
+                  </div>
+                    <!-- <div class="col-xss-12 col-xs-6 col-sm-4 col-md-2"> -->
+                     
+                    <!-- </div> -->
+                    <button class="btn btn-block" style="background: #505F6B;">Apply</button>
+                
+                </a>
+               
+              </div>
+              
+            </div>
+            
+            
+  
+      
+            
+          </div>
+        
+        </div>
+  
+      </div>
+      
+      <div class="pager-wrapper">
+            
+        <ul class="pager-list">
+          <li class="paging-nav"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+          <li class="paging-nav"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+          <li class="number">
+            <span class="mr-5"><span class="font600">page</span></span>
+          </li>
+          <li class="form">
+            <form>
+              <input type="text" value="1" class="form-control"> 
+            </form>
+          </li>
+          <li class="number">
+            <span class="mr-5">/</span> <span class="font600">79</span>
+          </li>
+          <li class="paging-nav"><a href="#">go</a></li>
+          <li class="paging-nav"><a href="#"><i class="fa fa-angle-right"></i></a></li>
+          <li class="paging-nav"><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+        </ul>	
+      
+      </div>
+  
+    </div>
+  
+  </div>
