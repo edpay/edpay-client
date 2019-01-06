@@ -1,0 +1,35 @@
+.pagination {
+    margin: 9px 0 0;
+}
+
+.pagination>li>a,
+.pagination>li>span {
+    padding: 0;
+    margin: 0 3px;
+    border: 0;
+    display: block;
+    width: 24px;
+    height: 24px;
+    line-height: 23px;
+    border-radius: 50% !important;
+    text-align: center;
+    color: #666;
+}
+
+.pagination>li>a:hover,
+.pagination>li>span:hover,
+.pagination>li>a:focus,
+.pagination>li>span:focus {
+    color: #ffffff;
+    background-color: #e7604a;
+}
+
+.pagination>.active>a,
+.pagination>.active>span,
+.pagination>.active>a:hover,
+.pagination>.active>span:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:focus {
+    color: #ffffff;
+    background-color: #e7604a;
+}
