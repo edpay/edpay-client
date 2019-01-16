@@ -33,19 +33,19 @@ export class DashboardComponent implements OnInit {
   onApproveClick(_application: Application) {
     console.log('Approved');
     // TODO: POST to server to change status
-    _application.status = 'Approved';
+    _application.status_name = 'Approved';
 
   }
 
   onRejectClick(_application: Application) {
     console.log('Rejected');
     // TODO: POST to server to change status
-    _application.status = 'Rejected';
+    _application.status_name = 'Rejected';
   }
 
   onRequestMoreInfoClick(_application: Application) {
     console.log('Need more info');
     // TODO: POST to server to change status
-    _application.status = 'Need more info';
+    _application.status_name = 'Need more info';
   }
 }

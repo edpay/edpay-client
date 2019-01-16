@@ -1,0 +1,313 @@
+<pre>{{ applicationForm.valid }}</pre>
+
+<div class="container">
+
+  <form class="post-form-wrapper" style="margin-top: 50px;" (ngSubmit)='onApply()' [formGroup]="applicationForm">
+
+    <div class="row">
+      <div class="col-sm-12">
+        <label for="applicationCourse">Applying For</label>
+      </div>
+
+      <div class="col-sm-10 col-md-8">
+        <select id="applicationCourse" formControlName="applicationCourse" class="selectpicker show-tick form-control mb-15"
+          data-live-search="true">
+          <option value="0">Select</option>
+          <option value="1">1st Standard</option>
+          <option value="2">5th Standard</option>
+          <option value="3">8th Standard</option>
+          <option value="4">PCMB</option>
+          <option value="5">PCMC</option>
+          <option value="5">PCME</option>
+          <option value="5">BSc</option>
+        </select>
+      </div>
+
+    </div>
+    <div class="clear"></div>
+    <div class="row">
+      <div class="col-sm-4 col-md-3">
+
+        <div class="form-group">
+          <label for="studentFirstName">First Name</label>
+          <input type="text" class="form-control" id="studentFirstName" formControlName="studentFirstName">
+        </div>
+
+      </div>
+
+      <div class="col-sm-4 col-md-3">
+
+        <div class="form-group">
+          <label for="studentMiddleName">Middle Name</label>
+          <input type="text" class="form-control" id="studentMiddleName" formControlName="studentMiddleName">
+        </div>
+
+      </div>
+
+      <div class="col-sm-4 col-md-3">
+
+        <div class="form-group">
+          <label for="studentLastName">Last Name</label>
+          <input type="text" class="form-control" id="studentLastName" formControlName="studentLastName">
+        </div>
+
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="row">
+      <div class="col-sm-4 col-md-3">
+
+        <div class="form-group">
+          <label for="studentDateOfBirth">Date of Birth</label>
+          <input type="date" class="form-control" id="studentDateOfBirth" formControlName="studentDateOfBirth">
+        </div>
+
+      </div>
+
+      <div class="col-sm-4 col-md-3">
+
+        <div class="form-group">
+          <label for="studentEmail">Email</label>
+          <input type="email" class="form-control" id="studentEmail" formControlName="studentEmail">
+        </div>
+
+      </div>
+
+      <div class="col-sm-4 col-md-3">
+
+        <div class="form-group">
+          <label for="studentPhoneNumber">Phone Number</label>
+          <input type="text" class="form-control" id="studentPhoneNumber" formControlName="studentPhoneNumber">
+        </div>
+
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="row">
+      <div class="form-group" id="studentAddress" formGroupName="studentAddress">
+
+        <div class="col-sm-12">
+          <label for="studentAddressLine1">Student Address</label>
+        </div>
+        <div class="col-sm-4 col-md-3">
+
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Address Line 1" id="studentAddressLine1"
+              formControlName="studentAddressLine1">
+          </div>
+
+        </div>
+
+        <div class="col-sm-4 col-md-3">
+
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Address Line 2" id="studentAddressLine2"
+              formControlName="studentAddressLine2">
+          </div>
+
+        </div>
+
+        <div class="col-sm-4 col-md-3">
+
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Zip code" id="studentAddressZipCode" formControlName="studentAddressZipCode">
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+
+        <div class="form-group">
+          <label for="studentCategory">Category</label>
+          <select class="selectpicker show-tick form-control mb-15" data-live-search="false" id="studentCategory"
+            formControlName="studentCategory">
+            <option selected>Select</option>
+            <option value="general">General</option>
+            <option value="2a">2A</option>
+            <option value="3a">3A</option>
+            <option value="2b">2B</option>
+          </select>
+        </div>
+
+      </div>
+
+      <div class="col-sm-6 col-md-4">
+        <div class="form-group">
+          <label>Gender</label>
+          <div class="row" formGroupName="gender">
+            <div class="col-xs-4 col-sm-4">
+              <input class="custom-radio-big" type="radio" id="gender_male" formControlName="studentGender" value="Male">
+              <label for="gender_male">Male</label>
+            </div>
+            <div class="col-xs-4 col-sm-4">
+              <input class="custom-radio-big" type="radio" id="gender_female" formControlName="studentGender" value="Female">
+              <label for="gender_female">Female</label>
+            </div>
+            <div class="col-xs-4 col-sm-4">
+              <input class="custom-radio-big" type="radio" id="gender_other" formControlName="studentGender" value="Other">
+              <label for="gender_other">Other</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <div class="form-group">
+          <label for="studentSubCaste">Sub caste</label>
+          <input type="text" class="form-control" id="studentSubCaste" formControlName="studentSubCaste">
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4">
+        <div class="form-group">
+          <label>Sports Quota?</label>
+          <div class="row">
+            <div class="col-xs-6 col-sm-6">
+              <input class="custom-radio-big" type="radio" formControlName="sportsQuota" value="Yes" id="sports_quota_yes">
+              <label for="sports_quota_yes">Yes</label>
+            </div>
+            <div class="col-xs-6 col-sm-6">
+              <input class="custom-radio-big" type="radio" formControlName="sportsQuota" value="No" id="sports_quota_no">
+              <label for="sports_quota_no">No</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+
+        <div class="form-group">
+          <label for="studentGuardianName">Guardian Full Name</label>
+          <input type="text" class="form-control" id="studentGuardianName" formControlName="studentGuardianName">
+        </div>
+
+      </div>
+      <div class="col-sm-6 col-md-4">
+
+        <div class="form-group">
+          <label for="studentGuardianIncome">Guardian Annual Income</label>
+          <input type="text" class="form-control" id="studentGuardianIncome" formControlName="studentGuardianIncome">
+        </div>
+
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+
+        <div class="form-group">
+          <label for="studentPrevSchoolName">Previous School Name</label>
+          <input type="text" class="form-control" id="studentPrevSchoolName" formControlName="studentPrevSchoolName">
+        </div>
+
+      </div>
+      <div class="col-sm-6 col-md-4">
+
+        <div class="form-group">
+          <label for="studentMediumOfStudy">Medium of study</label>
+          <input type="text" class="form-control" id="studentMediumOfStudy" formControlName="studentMediumOfStudy">
+        </div>
+
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="row">
+      <div class="form-group" formGroupName='studentPrevSchoolAddress'>
+
+        <div class="col-sm-12">
+          <label for="studentPrevSchoolAddLine1">Previous School Address</label>
+        </div>
+        <div class="col-sm-4 col-md-3">
+
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Address Line 1" id="studentPrevSchoolAddLine1"
+              formControlName="studentPrevSchoolAddLine1">
+          </div>
+
+        </div>
+
+        <div class="col-sm-4 col-md-3">
+
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Address Line 2" id="studentPrevSchoolAddLine2"
+              formControlName="studentPrevSchoolAddLine2">
+          </div>
+
+        </div>
+
+        <div class="col-sm-4 col-md-3">
+
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Zip code" id="studentPrevSchoolAddZip" formControlName="studentPrevSchoolAddZip">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="row">
+
+      <div class="col-sm-4 col-md-3">
+
+        <div class="form-group">
+          <label for="studentPrevExamRegNo">Previous Exam Register No</label>
+          <input type="text" class="form-control" id="studentPrevExamRegNo" formControlName="studentPrevExamRegNo">
+        </div>
+
+      </div>
+
+      <div class="col-sm-4 col-md-3">
+
+        <div class="form-group">
+          <label for="studentPrevExamPassYear">Previous Exam Passout Year</label>
+          <input type="text" class="form-control" placeholder="YYYY" id="studentPrevExamPassYear" formControlName="studentPrevExamPassYear">
+        </div>
+
+      </div>
+
+      <div class="col-sm-4 col-md-3">
+
+        <div class="form-group">
+          <label for="studentPrevExamPercent">Previous Exam Percentage</label>
+          <input type="text" class="form-control" id="studentPrevExamPercent" formControlName="studentPrevExamPercent">
+        </div>
+
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="row">
+      <div class="form-group">
+
+        <div class="col-sm-12 col-md-9">
+
+          <div class="form-group bootstrap3-wysihtml5-wrapper">
+            <label for="studentAboutMe">About me</label>
+            <textarea class="bootstrap3-wysihtml5 form-control" id="studentAboutMe" formControlName="studentAboutMe"
+              placeholder="Tell about yourself" style="height: 100px;"></textarea>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="clear"></div>
+
+    <div class="col-sm-12 col-md-9 mt-10 mb-15">
+      <button type="submit" class="btn btn-primary btn-block">Apply</button>
+    </div>
+
+  </form>
+</div>
+
+<hr>
+
+<pre>{{ applicationForm.value | json }}</pre>
